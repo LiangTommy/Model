@@ -28,7 +28,7 @@ public class MainActivity extends ActionBarActivity {
     public void step1() {
     	int a=0;
     	int b=0;
-    	int c=7;
+    	int c=8;
     }
     
 
