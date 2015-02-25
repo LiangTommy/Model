@@ -3,9 +3,10 @@ package com.model;
 public class SoundActivity {
 
 
-	void handle() {
+	public void load() {
+		
+		System.out.print("abc");
 
-	
 	}
 	
 }
