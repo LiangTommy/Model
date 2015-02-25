@@ -37,7 +37,7 @@ public class MainActivity extends ActionBarActivity {
     	int c=40;
     	int a=20;
     	int d=61;
-    	int e=70;
+    	
     }
     
     
