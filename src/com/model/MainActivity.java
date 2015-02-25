@@ -35,7 +35,6 @@ public class MainActivity extends ActionBarActivity {
     public void step2() {
     	int b=3;
     	int c=40;
-
     	int a=20;
     	int d=59;
 
