@@ -11,7 +11,12 @@ public class FragmentShow {
 	
 	public void debugFragmentShow() {
 		
+		int a,b,c;
 		
+		for(int i=0;i<10;i++) {
+			a=b+c;
+			b+=c;
+		}
 		
 	}
 	
