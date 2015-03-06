@@ -14,6 +14,7 @@ public class FragmentShow {
 		int a=1,d=6;
 		int b=0,c=0;
 		
+		
 		for(int i=0;i<10;i++) {
 			a=b+c;
 			b+=c;
