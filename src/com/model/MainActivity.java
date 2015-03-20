@@ -25,9 +25,7 @@ public class MainActivity extends ActionBarActivity {
         }
     }
 
-    public void loadBody() {
-    	
-    }
+    
     
     public void step1() {
     	int a=0;
