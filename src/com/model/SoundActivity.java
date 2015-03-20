@@ -9,4 +9,8 @@ public class SoundActivity {
 
 	}
 	
+	public void reStart() {
+		
+	}
+	
 }
