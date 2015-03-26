@@ -1,35 +1,85 @@
 package com.activity;
 
-import java.util.Vector;
-
-import com.model.R;
-
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
-import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v7.app.ActionBarActivity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.os.Build;
+import android.widget.Button;
+import android.widget.LinearLayout;
+
+import com.corehandle.command.BaseCommand;
+import com.corehandle.command.FetchCrashInfoCommand;
+import com.corehandle.command.FetchStoryInfoCommand;
+import com.corehandle.controller.BaseController;
+import com.corehandle.controller.CommandExecutor;
+import com.corehandle.receiver.BaseReceiver;
+import com.corehandle.receiver.FetchCrashInfoReceiver;
+import com.corehandle.receiver.FetchStoryInfoReceiver;
+import com.model.R;
 
 public class MainActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        if (savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction()
-                    .add(R.id.container, new PlaceholderFragment())
-                    .commit();
-        }
+//        setContentView(R.layout.activity_main);
+//
+//        if (savedInstanceState == null) {
+//            getSupportFragmentManager().beginTransaction()
+//                    .add(R.id.container, new PlaceholderFragment())
+//                    .commit();
+//        }
+        
+        loadCommand();
     }
 
     
+    
+    public void loadCommand() {
+    	LinearLayout layout=new LinearLayout(this);
+    	this.setContentView(layout);
+    	
+    	CommandExecutor.getCommandExecutor();
+    	
+    	Button button=new Button(this);
+    	button.setText("≤‚ ‘√¸¡Ó÷¥––");
+    	button.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				handleFetchStoryInfoCommand();
+				handleFetchCrashInfoCommand();
+			}
+		});
+    	
+    	layout.addView(button);
+    }
+    
+    public void handleFetchStoryInfoCommand() {
+    	BaseReceiver mReceiver = new FetchStoryInfoReceiver();
+    	
+    	BaseCommand mCommand = new FetchStoryInfoCommand();
+    	mCommand.setTag("fetch_story_tag");
+    	mCommand.setReceiver(mReceiver);
+    	
+    	BaseController controller=new BaseController();
+    	controller.setCommand(mCommand);
+    	controller.execute();
+    }
+    
+    public void handleFetchCrashInfoCommand() {
+    	BaseReceiver mReceiver = new FetchCrashInfoReceiver();
+    	BaseCommand mCommand = new FetchCrashInfoCommand();
+    	mCommand.setTag("fetch_crash_tag");
+    	mCommand.setReceiver(mReceiver);
+    	BaseController controller=new BaseController();
+    	controller.setCommand(mCommand);
+    	controller.execute();
+    }
     
     public void step1() {
     	int a=0;
