@@ -1,4 +1,4 @@
-package com.model;
+package com.activity;
 
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;

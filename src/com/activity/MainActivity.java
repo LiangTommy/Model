@@ -1,4 +1,8 @@
-package com.model;
+package com.activity;
+
+import java.util.Vector;
+
+import com.model.R;
 
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
