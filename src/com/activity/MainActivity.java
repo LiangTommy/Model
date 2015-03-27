@@ -1,6 +1,8 @@
 package com.activity;
 
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBarActivity;
 import android.view.LayoutInflater;
@@ -39,7 +41,7 @@ public class MainActivity extends ActionBarActivity {
     }
 
     
-    
+    Handler handler=new Handler();
     public void loadCommand() {
     	LinearLayout layout=new LinearLayout(this);
     	this.setContentView(layout);
@@ -52,7 +54,7 @@ public class MainActivity extends ActionBarActivity {
 			@Override
 			public void onClick(View v) {
 				handleFetchStoryInfoCommand();
-				handleFetchCrashInfoCommand();
+				handleFetchCrashInfoCommand();		
 			}
 		});
     	
