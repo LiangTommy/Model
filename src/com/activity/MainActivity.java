@@ -15,10 +15,10 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 
 import com.corehandle.command.BaseCommand;
-import com.corehandle.command.FetchCrashInfoCommand;
-import com.corehandle.command.FetchStoryInfoCommand;
+import com.corehandle.command.CommandHandler;
+import com.corehandle.common.FetchCrashInfoCommand;
+import com.corehandle.common.FetchStoryInfoCommand;
 import com.corehandle.controller.BaseController;
-import com.corehandle.controller.CommandHandler;
 import com.corehandle.receiver.BaseReceiver;
 import com.corehandle.receiver.FetchCrashInfoReceiver;
 import com.corehandle.receiver.FetchStoryInfoReceiver;

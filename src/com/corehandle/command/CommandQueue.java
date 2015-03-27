@@ -1,7 +1,6 @@
-package com.corehandle.controller;
+package com.corehandle.command;
 
 import java.util.concurrent.LinkedBlockingQueue;
-import com.corehandle.command.BaseCommand;
 
 public final class CommandQueue {
 
