@@ -30,7 +30,13 @@ public final class DownloadManager {
 		}
 	}
 	
-	public void handle(DownloadTask task) {
+	/**
+	 * 添加任务
+	 * 
+	 * @param task
+	 * 			远程下载的任务或本地的任务
+	 */
+	public void addTask(DownloadTask task) {
 		task.setDownloadStatusListener(new DownloadStatusListener() {			
 			@Override
 			public void onCancel(int ID) {

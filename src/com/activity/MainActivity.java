@@ -18,7 +18,7 @@ import com.corehandle.command.BaseCommand;
 import com.corehandle.command.FetchCrashInfoCommand;
 import com.corehandle.command.FetchStoryInfoCommand;
 import com.corehandle.controller.BaseController;
-import com.corehandle.controller.CommandExecutor;
+import com.corehandle.controller.CommandHandler;
 import com.corehandle.receiver.BaseReceiver;
 import com.corehandle.receiver.FetchCrashInfoReceiver;
 import com.corehandle.receiver.FetchStoryInfoReceiver;
@@ -46,7 +46,7 @@ public class MainActivity extends ActionBarActivity {
     	LinearLayout layout=new LinearLayout(this);
     	this.setContentView(layout);
     	
-    	CommandExecutor.getCommandExecutor();
+    	CommandHandler.getCommandExecutor();
     	
     	Button button=new Button(this);
     	button.setText("≤‚ ‘√¸¡Ó÷¥––");

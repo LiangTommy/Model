@@ -20,7 +20,7 @@ public class BaseController implements IController{
 
 	@Override
 	public void execute() {
-		CommandExecutor.getCommandExecutor().sendCommand(mCommand);
+		CommandHandler.getCommandExecutor().sendCommand(mCommand);
 	}
 
 	@Override
